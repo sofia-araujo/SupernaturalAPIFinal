@@ -1,0 +1,290 @@
+@font-face{
+    font-family: "supernatural";
+    src: url('../assets/Supernatural_Knight.ttf');
+  }
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --blue1: #4293c3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--black);
+    padding: 20px 40px;
+
+    font-family: 'supernatural', sans-serif;
+}
+
+header img {
+    width: 200px;
+}
+nav {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+
+header nav ul li a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid var(--blue1);
+}
+
+#background-image, .info-hero, header {
+    width: 100%;
+}
+
+#background-image {
+    height: 100%;
+}
+
+.main-episodes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 300px;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.section-random-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.random-quote {
+    width: 400px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#button-generate-quote, #ep-button {
+    background-color: var(--blue1);
+    color: var(--white);
+    border-style: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+#button-generate-quote:hover , #ep-button:hover{
+    cursor: pointer;
+    background-color: #285a77;
+}
+
+.section-episodes {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 40px 450px;
+    width: 500px;
+}
+
+.episode-info {
+    display: block;
+}
+
+.episodes {
+    margin-top: 8px;
+    width: 150px;
+    height: 80px;
+}
+
+#title-page-episodes {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2, h1{
+
+    font-family: 'supernatural', sans-serif;
+}
+
+.characters {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
+    column-gap: 5px;
+}
+.character-box {
+    width: 250px;
+    cursor: pointer;
+}
+
+.img-character {
+    width: 270px;
+}
+
+span {
+    display: block;
+    padding-top: 5px;
+    width: 200px;
+}
+
+.title-span {
+    display: inline;
+    color: var(--blue1);
+}
+.main-specific-character {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.specific-charater {
+    width: 150px;
+}
+
+.main-personalized {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 35px;
+}
+
+#season {
+    border: 2px solid var(--blue1);
+    border-radius: 5px;
+    padding: 5px 12px;
+}
+
+
+.background-div {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+}
+
+.span-personalized {
+    width: 405px;
+}
+
+@media (max-width: 1212px) {
+    .background-div {
+        background-image: url("../images/background-mobile.png");
+        height: 350px;
+    }
+    .characters {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+}
+@media (max-width: 912px) {
+    .info-hero {
+        padding: 30px;
+    }
+    .logo {
+        width: 200px;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    ul li a {
+        font-size: 0.7rem;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 4rem;
+    }
+    .background-div {
+        height: 230px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    ul li a {
+        font-size: 0.5rem;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    .background-div {
+        height: 150px;
+    }
+
+    .section-episodes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+    }
+
+    .title-pages-episodes {
+        font-size: 0.7rem;
+    }
+
+    .main-personalized h1, h2 {
+        font-size: 1rem;
+    }
+
+    .random-quote {
+        width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .span-personalized {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90px;
+    }
+}
